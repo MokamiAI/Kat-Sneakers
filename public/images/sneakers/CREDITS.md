@@ -43,3 +43,15 @@ The licence covers the photo, not the brands shown. Use these for mockups and ba
 | pink-on-wood.jpg | Unbranded | Pink on wood | product | STONES and BONES | [Unsplash](https://unsplash.com/photos/pink-sneakers-are-showcased-against-a-wooden-background-FsrthuGiWc8) |
 | pink-blue-stripes.jpg | Unbranded | Pink suede, blue stripes, worn | lifestyle | STONES and BONES | [Unsplash](https://unsplash.com/photos/pink-sneakers-with-blue-stripes-are-on-display-tTzQ5lMgdx8) |
 | multicolour-on-feet.jpg | Unbranded | Pink/yellow/green, worn | lifestyle | Diyana Qua | [Unsplash](https://unsplash.com/photos/person-wearing-white-and-black-socks-and-pink-yellow-and-green-low-top-sneakers-fXCyQ3e6XIk) |
+
+
+## Additional collection photography
+
+Verified on Unsplash on 19 October 2026. Free under the [Unsplash License](https://unsplash.com/license), not an open-source or public-domain licence. Used as illustrative collection imagery.
+
+| File | Brand | Shows | Use | Photographer | Source |
+|---|---|---|---|---|---|
+
+| court-white-nike.jpg | Nike | Collection photography | editorial | Ryan Plomp | [Unsplash](https://unsplash.com/photos/bySPt2lySzg) |
+| training-orange-nike.jpg | Nike | Collection photography | editorial | Ryan De Hamer | [Unsplash](https://unsplash.com/photos/VRiyW0BUnVk) |
+| street-black-white-nike.jpg | Nike | Collection photography | editorial | Clint Bustrillos | [Unsplash](https://unsplash.com/photos/EpmJBf-kQRE) |

@@ -6,12 +6,30 @@ const inventory = [
   {id:5,brand:'Puma',name:'Suede Classic',colour:'Black / White',price:999,was:1299,image:'puma-suede-black.jpg',categories:['Men','Women'],sizes:[4,5,6,7,8,9,10]},
   {id:6,brand:'Vans',name:'Little Everyday Low',colour:'Sunflower / White',price:499,image:'vans-yellow-low.jpg',categories:['Kids'],tag:'Little steps',sizes:['10K','11K','12K','13K',1,2]},
   {id:7,brand:'Nike',name:'Everyday Runner',colour:'Cool Grey',price:1099,image:'nike-grey-runner.jpg',categories:['Men','Comfort'],tag:'Easy all day',sizes:[5,6,7,8,9,10,11]},
-  {id:8,brand:'Converse',name:'Junior All Star',colour:'Blue / White',price:599,was:799,image:'converse-blue.jpg',categories:['Kids'],sizes:[1,2,3,4,5]}
+  {id:8,brand:'Converse',name:'Junior All Star',colour:'Blue / White',price:599,was:799,image:'converse-blue.jpg',categories:['Kids'],sizes:[1,2,3,4,5]} ,
+{"id": 9, "brand": "Nike", "name": "Air Jordan 1", "colour": "White / Black", "price": 1799, "image": "nike-air-jordan-1-white-black.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 10, "brand": "Nike", "name": "Air Max 95", "colour": "Black / White", "price": 1699, "image": "nike-air-max-95-black-white.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1999},
+{"id": 11, "brand": "Nike", "name": "Colour Accent Low", "colour": "White / Red", "price": 1199, "image": "nike-white-red-floating.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 12, "brand": "Nike", "name": "Red Runner", "colour": "University Red", "price": 899, "image": "nike-red-runner.jpg", "categories": ["Men"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1199},
+{"id": 13, "brand": "adidas", "name": "Classic White Low", "colour": "White", "price": 799, "image": "adidas-white-low.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 14, "brand": "adidas", "name": "Everyday Three Stripes", "colour": "Black / White", "price": 899, "image": "adidas-black-white.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 15, "brand": "adidas", "name": "Red Court Low", "colour": "Red / White", "price": 699, "image": "adidas-red-white-low.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 999},
+{"id": 16, "brand": "Puma", "name": "White Court Classic", "colour": "White / Red", "price": 799, "image": "puma-white-red.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 17, "brand": "Converse", "name": "All Star White High", "colour": "White", "price": 849, "image": "converse-all-star-white-high.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 18, "brand": "Converse", "name": "All Star Grey High", "colour": "Grey", "price": 699, "image": "converse-all-star-grey-high.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 899},
+{"id": 19, "brand": "New Balance", "name": "Everyday White", "colour": "White / Grey", "price": 1199, "image": "new-balance-white-pair.jpg", "categories": ["Women", "Men", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 20, "brand": "New Balance", "name": "White Retro", "colour": "White", "price": 1099, "image": "new-balance-white-on-textile.jpg", "categories": ["Men", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1399},
+{"id": 21, "brand": "Vans", "name": "Sk8-Hi Classic", "colour": "Black / White", "price": 999, "image": "vans-sk8-hi-black.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
+{"id": 22, "brand": "Vans", "name": "Checkerboard Classic", "colour": "Black / White", "price": 799, "image": "vans-checkerboard.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 999},
+{"id": 23, "brand": "Kat Everyday", "name": "Junior Pink Low", "colour": "Pink / White", "price": 449, "image": "pink-white-low.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2]},
+{"id": 24, "brand": "Kat Everyday", "name": "Little Pink Classic", "colour": "Pink", "price": 399, "image": "pink-on-wood.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2], "was": 499},
+{"id": 25, "brand": "Kat Everyday", "name": "Colourful Everyday", "colour": "Pink / Blue", "price": 499, "image": "pink-blue-stripes.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2]},
+{"id": 26, "brand": "Kat Everyday", "name": "Teal Everyday", "colour": "Teal", "price": 599, "image": "teal-pair.jpg", "categories": ["Women", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9]}
 ];
 const $ = selector => document.querySelector(selector);
 const money = value => 'R' + value.toLocaleString('en-ZA').replace(/[,\u00a0\u202f]/g,' ');
 const photo = product => `public/images/sneakers/${product.image}`;
-let category='All', brand='', selectedSize=null, activeProduct=null, toastTimer;
+let category=document.body.dataset.initialCategory || 'All', brand='', selectedSize=null, activeProduct=null, toastTimer;
 let bag=[];
 try { const saved=JSON.parse(localStorage.getItem('crease-bag')||'[]'); if(Array.isArray(saved)) bag=saved.filter(line=>inventory.some(p=>p.id===line.id&&p.sizes.includes(line.size))&&Number.isInteger(line.qty)&&line.qty>0); } catch {}
 function render(){
@@ -24,7 +42,7 @@ function render(){
   document.querySelectorAll('.tabs button').forEach(b=>{const active=b.dataset.category===category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
 }
 function filterCategory(value){category=value;brand='';render();}
-document.querySelectorAll('[data-category]').forEach(el=>el.addEventListener('click',()=>filterCategory(el.dataset.category)));
+document.querySelectorAll('button[data-category]').forEach(el=>el.addEventListener('click',()=>filterCategory(el.dataset.category)));
 ['search','budget','sort'].forEach(id=>$('#'+id).addEventListener(id==='search'?'input':'change',render));
 $('#brand-list').innerHTML=['Nike','adidas','Puma','Converse','New Balance','Vans'].map(name=>`<button data-brand="${name}">${name}</button>`).join('');
 $('#brand-list').addEventListener('click',e=>{const button=e.target.closest('[data-brand]');if(!button)return;brand=button.dataset.brand;category='All';$('#search').value='';$('#budget').value='99999';render();$('#shop').scrollIntoView();});
@@ -53,3 +71,19 @@ $('#size-guide').addEventListener('click',sizeGuide);$('#footer-size-guide').add
 $('#delivery-info').addEventListener('click',()=>info('<p class="eyebrow">GOOD TO KNOW</p><h2 id="info-title">Delivery & payment</h2><p>The planned store will deliver across South Africa. Courier rates, timelines and exchange terms still need to be confirmed.</p><p>Version 1 uses manual EFT. After placing an order, customers will receive bank details and upload proof of payment. Staff will confirm cleared funds before fulfilment.</p><p>This HTML prototype does not place orders, collect payments or accept payment documents.</p>'));
 function toast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('visible');toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),2600);}
 $('#year').textContent=new Date().getFullYear();saveBag();render();
+
+const brandDescriptions = {
+  Nike: 'Court-inspired low-tops, bold high-tops and running-inspired silhouettes.',
+  adidas: 'Three-stripe classics, clean low-tops and retro court style.',
+  Puma: 'Suede favourites and sporty everyday court silhouettes.',
+  Converse: 'Familiar canvas high-tops and colour-filled everyday classics.',
+  'New Balance': 'Retro running shapes and understated everyday colourways.',
+  Vans: 'Skate-inspired high-tops and the unmistakable checkerboard pattern.'
+};
+$('#brand-stories').innerHTML=Object.entries(brandDescriptions).map(([name,description])=>`<article><h3>${name}</h3><p>${description}</p><p class="fine-print">${inventory.filter(p=>p.brand===name).length} sample styles</p></article>`).join('');
+document.querySelectorAll('[data-editorial-brand]').forEach(button=>button.addEventListener('click',()=>{
+  brand=button.dataset.editorialBrand;$('#search').value='';$('#budget').value='99999';render();$('#shop').scrollIntoView();
+}));
+// Brand tiles navigate into the catalogue when opened in a new tab or shared.
+const initialBrand=new URLSearchParams(location.search).get('brand');
+if(initialBrand && inventory.some(p=>p.brand===initialBrand)){brand=initialBrand;render();}
