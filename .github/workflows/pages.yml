@@ -22,10 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check mock presentation flows
+        run: npm test
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp *.html styles.css app.js _site/
+          cp *.html *.css *.js _site/
           cp -R public _site/public
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5

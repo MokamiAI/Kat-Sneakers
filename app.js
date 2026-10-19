@@ -1,31 +1,3 @@
-const inventory = [
-  {id:1,brand:'Nike',name:'Air Force 1 ’07',colour:'White / White',price:1499,image:'nike-air-force-1-white.jpg',categories:['Men','Women'],tag:'Everyday essential',sizes:[3,4,5,6,7,8,9,10]},
-  {id:2,brand:'adidas',name:'Everyday Low',colour:'Cloud White / Blue',price:899,was:1199,image:'adidas-white-blue-pair.jpg',categories:['Men','Women'],sizes:[4,5,6,7,8,9]},
-  {id:3,brand:'New Balance',name:'Classic Comfort',colour:'Pink / Grey',price:1299,image:'new-balance-pink-grey.jpg',categories:['Women','Comfort'],tag:'Comfort favourite',sizes:[3,4,5,6,7,8]},
-  {id:4,brand:'Converse',name:'Chuck Taylor All Star',colour:'Black / White',price:799,image:'converse-all-star-black-high.jpg',categories:['Men','Women'],tag:'The original',sizes:[3,4,5,6,7,8,9,10]},
-  {id:5,brand:'Puma',name:'Suede Classic',colour:'Black / White',price:999,was:1299,image:'puma-suede-black.jpg',categories:['Men','Women'],sizes:[4,5,6,7,8,9,10]},
-  {id:6,brand:'Vans',name:'Little Everyday Low',colour:'Sunflower / White',price:499,image:'vans-yellow-low.jpg',categories:['Kids'],tag:'Little steps',sizes:['10K','11K','12K','13K',1,2]},
-  {id:7,brand:'Nike',name:'Everyday Runner',colour:'Cool Grey',price:1099,image:'nike-grey-runner.jpg',categories:['Men','Comfort'],tag:'Easy all day',sizes:[5,6,7,8,9,10,11]},
-  {id:8,brand:'Converse',name:'Junior All Star',colour:'Blue / White',price:599,was:799,image:'converse-blue.jpg',categories:['Kids'],sizes:[1,2,3,4,5]} ,
-{"id": 9, "brand": "Nike", "name": "Air Jordan 1", "colour": "White / Black", "price": 1799, "image": "nike-air-jordan-1-white-black.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 10, "brand": "Nike", "name": "Air Max 95", "colour": "Black / White", "price": 1699, "image": "nike-air-max-95-black-white.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1999},
-{"id": 11, "brand": "Nike", "name": "Colour Accent Low", "colour": "White / Red", "price": 1199, "image": "nike-white-red-floating.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 12, "brand": "Nike", "name": "Red Runner", "colour": "University Red", "price": 899, "image": "nike-red-runner.jpg", "categories": ["Men"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1199},
-{"id": 13, "brand": "adidas", "name": "Classic White Low", "colour": "White", "price": 799, "image": "adidas-white-low.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 14, "brand": "adidas", "name": "Everyday Three Stripes", "colour": "Black / White", "price": 899, "image": "adidas-black-white.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 15, "brand": "adidas", "name": "Red Court Low", "colour": "Red / White", "price": 699, "image": "adidas-red-white-low.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 999},
-{"id": 16, "brand": "Puma", "name": "White Court Classic", "colour": "White / Red", "price": 799, "image": "puma-white-red.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 17, "brand": "Converse", "name": "All Star White High", "colour": "White", "price": 849, "image": "converse-all-star-white-high.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 18, "brand": "Converse", "name": "All Star Grey High", "colour": "Grey", "price": 699, "image": "converse-all-star-grey-high.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 899},
-{"id": 19, "brand": "New Balance", "name": "Everyday White", "colour": "White / Grey", "price": 1199, "image": "new-balance-white-pair.jpg", "categories": ["Women", "Men", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 20, "brand": "New Balance", "name": "White Retro", "colour": "White", "price": 1099, "image": "new-balance-white-on-textile.jpg", "categories": ["Men", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 1399},
-{"id": 21, "brand": "Vans", "name": "Sk8-Hi Classic", "colour": "Black / White", "price": 999, "image": "vans-sk8-hi-black.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9]},
-{"id": 22, "brand": "Vans", "name": "Checkerboard Classic", "colour": "Black / White", "price": 799, "image": "vans-checkerboard.jpg", "categories": ["Men", "Women"], "sizes": [3, 4, 5, 6, 7, 8, 9], "was": 999},
-{"id": 23, "brand": "Kat Everyday", "name": "Junior Pink Low", "colour": "Pink / White", "price": 449, "image": "pink-white-low.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2]},
-{"id": 24, "brand": "Kat Everyday", "name": "Little Pink Classic", "colour": "Pink", "price": 399, "image": "pink-on-wood.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2], "was": 499},
-{"id": 25, "brand": "Kat Everyday", "name": "Colourful Everyday", "colour": "Pink / Blue", "price": 499, "image": "pink-blue-stripes.jpg", "categories": ["Kids"], "sizes": ["10K", "11K", "12K", "13K", 1, 2]},
-{"id": 26, "brand": "Kat Everyday", "name": "Teal Everyday", "colour": "Teal", "price": 599, "image": "teal-pair.jpg", "categories": ["Women", "Comfort"], "sizes": [3, 4, 5, 6, 7, 8, 9]}
-];
 const $ = selector => document.querySelector(selector);
 const money = value => 'R' + value.toLocaleString('en-ZA').replace(/[,\u00a0\u202f]/g,' ');
 const photo = product => `public/images/sneakers/${product.image}`;
@@ -48,10 +20,15 @@ $('#brand-list').innerHTML=['Nike','adidas','Puma','Converse','New Balance','Van
 $('#brand-list').addEventListener('click',e=>{const button=e.target.closest('[data-brand]');if(!button)return;brand=button.dataset.brand;category='All';$('#search').value='';$('#budget').value='99999';render();$('#shop').scrollIntoView();});
 $('#under-1000').addEventListener('click',()=>{category='All';brand='';$('#search').value='';$('#budget').value='1000';render();$('#shop').scrollIntoView();});
 $('#all-brands').addEventListener('click',()=>{category='All';brand='';$('#search').value='';$('#budget').value='99999';render();$('#shop').scrollIntoView();});
-$('#products').addEventListener('click',e=>{const button=e.target.closest('[data-product]');if(!button)return;activeProduct=inventory.find(p=>p.id===Number(button.dataset.product));selectedSize=null;const p=activeProduct;
-  $('#product-detail').innerHTML=`<div class="detail-grid"><img src="${photo(p)}" alt="${p.brand} ${p.name}"><div><p class="product-brand">${p.brand.toUpperCase()}</p><h2 id="product-title">${p.name}</h2><span class="price">${money(p.price)}</span><p>${p.colour}<br>Sample catalogue item. Size availability is illustrative.</p><strong>Select your UK size</strong><div class="sizes" role="group" aria-label="UK size">${p.sizes.map(size=>`<button data-size="${size}" aria-pressed="false">${size}</button>`).join('')}</div><button class="button" id="add-to-bag" disabled>Choose a size</button><p>Pay by manual EFT when the store launches. Delivery options and totals will be confirmed at checkout.</p></div></div>`;
-  $('#product-dialog').showModal();
-});
+async function openProduct(id){
+  activeProduct=inventory.find(p=>p.id===Number(id));if(!activeProduct)return;selectedSize=null;const p=activeProduct;
+  const stock=null;
+  if(activeProduct!==p)return;
+  const soldOut=size=>stock&&stock.find(v=>v.product===p.id&&v.size===String(size))?.available===0;
+  $('#product-detail').innerHTML=`<div class="detail-grid"><img src="${photo(p)}" alt="${p.brand} ${p.name}"><div><p class="product-brand">${p.brand.toUpperCase()}</p><h2 id="product-title">${p.name}</h2><span class="price">${money(p.price)}</span>${p.was?` <span class="was">${money(p.was)}</span><p class="sale">On sale / Save ${money(p.was-p.price)}</p>`:''}<p>${p.colour}<br>Sample catalogue / choose any available UK size.</p><strong>Select your UK size</strong><div class="sizes" role="group" aria-label="UK size">${p.sizes.map(size=>`<button data-size="${size}" aria-pressed="false" ${soldOut(size)?'disabled title="Out of stock"':''}>${size}</button>`).join('')}</div><button class="button" id="add-to-bag" disabled>Choose a size</button><p>Pay by manual EFT when the store launches. Delivery options and totals will be confirmed at checkout.</p></div></div>`;
+  if(!$('#product-dialog').open)$('#product-dialog').showModal();
+}
+$('#products').addEventListener('click',e=>{const button=e.target.closest('[data-product]');if(button)openProduct(button.dataset.product);});
 $('#product-detail').addEventListener('click',e=>{const sizeButton=e.target.closest('[data-size]');if(sizeButton){selectedSize=activeProduct.sizes.find(size=>String(size)===sizeButton.dataset.size);document.querySelectorAll('[data-size]').forEach(b=>{b.classList.toggle('selected',b===sizeButton);b.setAttribute('aria-pressed',String(b===sizeButton));});$('#add-to-bag').disabled=false;$('#add-to-bag').textContent='Add to bag ↗';}
   if(e.target.closest('#add-to-bag')&&selectedSize!==null){const existing=bag.find(line=>line.id===activeProduct.id&&line.size===selectedSize);if(existing)existing.qty++;else bag.push({id:activeProduct.id,size:selectedSize,qty:1});saveBag();$('#product-dialog').close();toast('Added to your bag');}
 });
@@ -59,7 +36,7 @@ function saveBag(){try{localStorage.setItem('crease-bag',JSON.stringify(bag));}c
 function renderBag(){
   $('#bag-items').innerHTML=bag.length?bag.map((line,index)=>{const p=inventory.find(p=>p.id===line.id);return `<article class="bag-line"><img src="${photo(p)}" alt="${p.name}"><div><h3>${p.brand} ${p.name}</h3><p>UK ${line.size} · Quantity ${line.qty}</p><p>${money(p.price*line.qty)}</p><button class="remove" data-remove="${index}">Remove</button></div></article>`;}).join(''):'<p>Your next favourite pair is waiting.</p><button class="button" id="continue-shopping">Explore the collection ↗</button>';
   const total=bag.reduce((sum,line)=>sum+inventory.find(p=>p.id===line.id).price*line.qty,0);
-  $('#bag-summary').innerHTML=bag.length?`<div class="bag-total"><span>Subtotal</span><span>${money(total)}</span></div><p class="fine-print">This is a storefront prototype. Your bag is saved on this browser. Checkout, delivery calculations and EFT proof uploads require the backend described in the architecture.</p>`:'';
+  $('#bag-summary').innerHTML=bag.length?`<div class="bag-total"><span>Subtotal</span><span>${money(total)}</span></div><a class="button" href="checkout.html">Continue to checkout &#8599;</a><p class="fine-print">Try the sample checkout and EFT payment journey.</p>`:'';
 }
 $('#open-bag').addEventListener('click',()=>{renderBag();$('#bag-dialog').showModal();});
 $('#bag-items').addEventListener('click',e=>{const remove=e.target.closest('[data-remove]');if(remove){bag.splice(Number(remove.dataset.remove),1);saveBag();renderBag();}if(e.target.closest('#continue-shopping')){$('#bag-dialog').close();$('#shop').scrollIntoView();}});
@@ -87,3 +64,9 @@ document.querySelectorAll('[data-editorial-brand]').forEach(button=>button.addEv
 // Brand tiles navigate into the catalogue when opened in a new tab or shared.
 const initialBrand=new URLSearchParams(location.search).get('brand');
 if(initialBrand && inventory.some(p=>p.brand===initialBrand)){brand=initialBrand;render();}
+
+// A sale spotlight links to a shareable product inside the sale collection.
+const spotlightId=Number(new URLSearchParams(location.search).get('product'));
+if(spotlightId && inventory.some(p=>p.id===spotlightId&&p.was>p.price)){
+  category='Sale';brand='';$('#budget').value='99999';render();openProduct(spotlightId);
+}

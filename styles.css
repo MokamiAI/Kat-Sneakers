@@ -19,3 +19,36 @@ body[data-page] .hero-copy>p:not(.eyebrow){max-width:420px}
 .brand-stories article{border:1px solid var(--line);border-radius:18px;padding:25px}
 @media(max-width:1000px){.header{gap:15px}.header nav{gap:15px}.logo{font-size:28px}.editorial-grid img{height:210px}}
 @media(max-width:680px){body[data-page] .hero-copy h1{font-size:48px}.editorial-grid,.brand-stories{grid-template-columns:1fr}.editorial-grid img{height:250px}.editorial-grid article>div{padding:20px}.brand-stories{gap:12px}.logo{font-size:29px}}
+
+/* Original hero artwork with discreet sale-rotation controls. */
+.sale-showcase{background:#e9e9e7;isolation:isolate;min-width:0}
+#sale-slides{position:absolute;inset:0}
+.sale-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .65s ease,visibility .65s;overflow:hidden;border-radius:inherit}
+.sale-slide.is-active{opacity:1;visibility:visible;z-index:1}
+.sale-slide>img{width:100%;height:100%;object-fit:cover;display:block}
+.sale-slide.is-active>img{animation:sale-drift 8s ease-in-out infinite}
+.rotation-stopped .sale-slide>img{animation-play-state:paused}
+.sale-slide:focus-visible{outline-offset:-6px}
+.sale-showcase .hero-sticker{z-index:2;pointer-events:none}
+.sale-showcase .photo-caption{z-index:2;pointer-events:none;max-width:calc(100% - 205px);line-height:1.6}
+.showcase-controls{position:absolute;z-index:3;right:18px;bottom:18px;background:#ffffffed;padding:4px;border-radius:40px}
+.showcase-buttons{display:flex;gap:2px}
+.showcase-controls button{min-width:44px;height:44px;border:0;border-radius:30px;background:transparent;font-size:17px}
+.showcase-controls #sale-pause{font-size:10px;padding:0 8px;min-width:48px}
+.showcase-controls button:hover{background:var(--ink);color:white}
+#sale-position{display:none}
+@keyframes sale-drift{0%,100%{transform:scale(1.01) translateY(0)}50%{transform:scale(1.04) translateY(-4px)}}
+@media(max-width:680px){.sale-showcase{min-height:360px}.sale-showcase .photo-caption{left:16px;bottom:18px;font-size:8px;padding:8px 10px;max-width:calc(100% - 178px)}.showcase-controls{right:12px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){.sale-slide{transition:none}.sale-slide.is-active>img{animation:none}}
+
+.sale-showcase .hero-sticker>span{display:block;font:9px 'Geist Mono',monospace;letter-spacing:.04em}.sale-showcase .hero-sticker del{display:block;margin-top:6px;font:12px 'Geist Mono',monospace;color:#333}.sale-showcase .hero-sticker strong{font-size:34px}
+
+/* Visible customer account links beside the bag on every storefront page. */
+.header-actions{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.header-signin,.header-join{display:inline-flex;align-items:center;justify-content:center;min-height:44px;font-size:13px;font-weight:600;white-space:nowrap}
+.header-signin:hover{text-decoration:underline;text-underline-offset:4px}
+.header-join{padding:0 16px;border:1px solid var(--line);border-radius:30px}
+.header-join:hover{background:var(--surface)}
+@media(min-width:681px) and (max-width:1150px){.header{flex-wrap:wrap;padding-top:22px;padding-bottom:14px;gap:16px}.header nav{order:3;width:100%;justify-content:center;flex-wrap:wrap}}
+@media(max-width:680px){.header-actions{gap:8px}.header-signin,.header-join{font-size:11px}.header-join{padding:0 10px}.header-actions .bag-button{gap:8px;padding:10px 12px}.header .logo{font-size:clamp(22px,5.7vw,29px);letter-spacing:-1.2px}.header nav{flex-wrap:wrap}}
+@media(max-width:370px){.header-actions{gap:5px}.header-join{padding:0 8px}.header-actions .bag-button{padding:10px;gap:6px}}

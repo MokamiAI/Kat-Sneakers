@@ -1,0 +1,50 @@
+.account-announcement{display:block;text-align:center}
+.account-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:28px;padding-bottom:28px}
+.account-header .logo{color:var(--ink)}
+.account-header nav{gap:24px}
+.account-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;padding-top:20px;padding-bottom:60px}
+.account-story{background:var(--ink);color:white;border-radius:28px;padding:35px;position:sticky;top:24px;overflow:hidden}
+.account-story h2{font-size:clamp(42px,4.6vw,64px);line-height:1;letter-spacing:-.06em}
+.account-story>p:not(.eyebrow){font-size:14px;line-height:1.7;max-width:290px}
+.account-story img{display:block;width:100%;aspect-ratio:1.25;object-fit:cover;border-radius:18px;margin-top:30px}
+.account-story-note{font:10px 'Geist Mono',monospace;letter-spacing:.08em;margin-top:25px;color:#d5d5d2}
+.account-content{padding:25px 0;max-width:510px;width:100%}
+.account-content>.eyebrow{color:var(--ink);margin-bottom:18px}
+.account-content h1{font-size:clamp(40px,4.5vw,58px);line-height:1.02;margin-bottom:20px}
+.account-intro{font-size:14px;color:var(--muted);line-height:1.8;margin:0 0 25px}
+.account-switch{display:flex;background:#f4f4f2;border-radius:40px;padding:5px;gap:5px;margin-bottom:26px}
+.account-switch a{flex:1;text-align:center;padding:13px 15px;border-radius:30px;font-size:13px;font-weight:600;min-height:44px}
+.account-switch a[aria-current=page]{background:var(--ink);color:white}
+.account-form{display:flex;flex-direction:column;gap:11px}
+.account-form label{font-size:12px;font-weight:650;line-height:1.6}
+.account-form input:not([type=checkbox]){min-height:50px;width:100%;border:1px solid #cececa;background:white;padding:13px 15px;border-radius:12px;color:var(--ink);font-size:14px;margin-bottom:6px}
+.label-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.label-row a{font-size:11px;color:#111111;text-decoration:underline;text-underline-offset:3px;padding:8px 0}
+.account-help{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 8px}
+.account-form .button,.account-content>.button{background:var(--ink);color:white;margin-top:6px;min-height:52px}
+.account-form .button{width:100%;justify-content:space-between}
+.account-bottom{font-size:13px;text-align:center;margin:24px 0 12px;color:var(--muted)}
+.account-bottom a{font-weight:650;color:#111111;text-decoration:underline;text-underline-offset:3px}
+.guest-link{display:block;text-align:center;min-height:44px;padding:14px 0;font-size:12px;color:#111111;margin-top:10px}
+.name-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.name-fields label{display:block;margin-bottom:11px}
+.account-check{display:flex;align-items:flex-start;gap:10px;font-weight:400!important;font-size:12px!important;padding:8px 0 14px}
+.account-check input{width:20px;min-width:20px;height:20px;margin:0;accent-color:var(--ink)}
+.account-note{background:var(--surface);border-radius:14px;padding:18px;font-size:12px;line-height:1.8;margin-bottom:24px}
+.account-icon{display:flex;align-items:center;justify-content:center;width:65px;height:65px;background:var(--surface);border-radius:50%;font-size:28px;margin-bottom:24px}
+.account-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.account-cards article{border:1px solid var(--line);border-radius:18px;padding:22px;background:white}
+.account-cards article:nth-child(2){background:#f4f4f2}
+.account-cards h2{font-size:22px;margin:18px 0 10px}
+.account-cards p{font-size:12px;line-height:1.8;color:var(--muted)}
+.account-cards a{display:block;font-size:12px;font-weight:600;color:#111111;min-height:44px;padding-top:12px}
+.card-number{font:11px 'Geist Mono',monospace;color:#111111}
+.coming-soon{font:10px 'Geist Mono',monospace;color:var(--muted)}
+.account-footer{background:transparent;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;font-size:11px;line-height:1.7}
+@media(max-width:950px){.account-layout{gap:30px}.account-story{padding:25px}.account-cards{grid-template-columns:1fr}}
+@media(max-width:680px){.account-header{padding-top:22px;padding-bottom:22px;flex-direction:column;gap:16px}.account-header .logo{font-size:36px}.account-layout{grid-template-columns:1fr;padding-top:0;gap:22px}.account-story{position:static;padding:24px}.account-story h2{font-size:37px}.account-story img{display:none}.account-story-note{margin-top:20px}.account-story .eyebrow{margin-bottom:14px}.account-content{padding:10px 0;max-width:none}.account-content h1{font-size:44px}.account-cards{grid-template-columns:1fr 1fr}.account-cards article{padding:18px}.account-cards h2{font-size:19px}.name-fields{gap:10px}}
+@media(max-width:380px){.account-cards,.name-fields{grid-template-columns:1fr}}
+
+.account-story,.account-content,.name-fields>div,.account-cards article{min-width:0}
+.account-form input{box-sizing:border-box;min-width:0}
+@media(max-width:680px){.account-header nav{flex-wrap:wrap;justify-content:center}.account-header nav a{display:inline-flex;align-items:center;min-height:44px}.account-cards{grid-template-columns:1fr}}
