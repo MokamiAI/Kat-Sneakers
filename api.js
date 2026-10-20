@@ -16,7 +16,7 @@ const Store=(()=>{
   return statuses.map((status,i)=>{
    const p=inventory[[1,4,2,0,7,3][i]],created=new Date(Date.now()-(i+1)*86400000).toISOString();
    const item={id:p.id,name:p.brand+' '+p.name,size:p.sizes[0],qty:1,price:p.price*100,image:p.image};
-   const o={id:'KAT-DEMO'+String(i+1).padStart(3,'0'),customer:{name:names[i],email:i===0?defaultUser.email:'customer'+i+'@example.com',phone:'082 000 0000',address:'12 Example Street',city:'Johannesburg',province:'Gauteng',postcode:'2001'},items:[item],delivery:7900,total:item.price+7900,status,created,source:'Online store',proofs:[],messages:[],events:[{at:created,text:'Order placed. Awaiting EFT payment.'}]};
+   const o={id:'KAT-DEMO'+String(i+1).padStart(3,'0'),customer:{name:names[i],email:i===0?defaultUser.email:'customer'+i+'@example.com',phone:'082 000 0000',pickupType:'mall',address:'Example Mall / collection store (sample)',city:'Johannesburg',province:'Gauteng'},items:[item],delivery:7900,total:item.price+7900,status,created,source:'Online store',proofs:[],messages:[],events:[{at:created,text:'Order placed. Awaiting EFT payment.'}]};
    if(status!=='awaiting_payment'){o.proofs.push({id:'sample-'+i,name:'sample-payment-proof.pdf',at:created});o.events.push({at:created,text:'Payment proof received.'});}
    if(['paid','packed','shipped','delivered'].includes(status))o.amountPaid=o.total;
    if(['shipped','delivered'].includes(status)){o.courier='The Courier Guy (sample)';o.tracking='DEMO-'+(82001+i);o.messages.push({at:created,text:`Hi ${o.customer.name}, order ${o.id} is on the way! Courier: ${o.courier}. Tracking: ${o.tracking}.`,status:'Sent (simulated)'});}
@@ -40,7 +40,7 @@ const Store=(()=>{
   create:async(customer,lines,delivery=7900,source='Online store')=>{
    if(!lines?.length)lines=[{id:2,size:4,qty:1}];
    const items=lines.map(line=>{const p=inventory.find(p=>p.id===Number(line.id))||inventory[1];return {id:p.id,name:p.brand+' '+p.name,size:line.size||p.sizes[0],qty:Number(line.qty)||1,price:p.price*100,image:p.image};});
-   const o={id:'KAT-'+uid().toUpperCase(),customer:{name:defaultUser.name,email:defaultUser.email,phone:'082 000 0000',address:'12 Example Street',city:'Johannesburg',province:'Gauteng',postcode:'2001',...Object.fromEntries(Object.entries(customer||{}).filter(([,v])=>v))},items,delivery,total:items.reduce((sum,p)=>sum+p.price*p.qty,0)+delivery,status:'awaiting_payment',created:now(),source,proofs:[],events:[],messages:[]};event(o,'Order placed. Awaiting EFT payment.');const orders=rows();orders.unshift(o);write('kat-pitch-orders',orders);write('kat-pitch-latest',o.id);return o;
+   const o={id:'KAT-'+uid().toUpperCase(),customer:{name:defaultUser.name,email:defaultUser.email,phone:'082 000 0000',pickupType:'mall',address:'Example Mall / collection store (sample)',city:'Johannesburg',province:'Gauteng',...Object.fromEntries(Object.entries(customer||{}).filter(([,v])=>v))},items,delivery,total:items.reduce((sum,p)=>sum+p.price*p.qty,0)+delivery,status:'awaiting_payment',created:now(),source,proofs:[],events:[],messages:[]};event(o,'Order placed. Awaiting EFT payment.');const orders=rows();orders.unshift(o);write('kat-pitch-orders',orders);write('kat-pitch-latest',o.id);return o;
   },
   transition:async(id,next,details={})=>update(id,o=>{
    o.status=next;if(next==='paid')o.amountPaid=o.total;if(next==='proof_rejected')o.rejection=details.reason||'Please upload a clearer payment proof.';
