@@ -4,4 +4,9 @@ node_modules/
 .env.*
 !.env.example
 *.log
+# Database and uploaded shoe photos (back these up)
 data/
+# Temporary output from the Chrome test run
+tests/e2e/.run/
+# Chrome test screenshots (regenerated on every run, about 15 MB)
+docs/testing/screenshots/

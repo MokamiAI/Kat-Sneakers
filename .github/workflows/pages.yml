@@ -25,13 +25,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Check mock presentation flows
+      - name: Run server tests
         run: npm test
       - name: Prepare static site
         run: |
-          mkdir -p _site
-          cp *.html *.css *.js _site/
-          cp -R public _site/public
+          cp -R site _site
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,77 @@
+.demo-banner{background:#f4f4f2;color:#111111;padding:12px 20px;text-align:center;font:11px 'Geist Mono',monospace;line-height:1.7}.commerce-header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:25px;padding-bottom:25px;border-bottom:1px solid var(--line)}.commerce-main{padding-top:42px;padding-bottom:60px}.commerce-main h1{font-size:48px;margin-bottom:15px}.commerce-main h2{font-size:26px;margin-bottom:18px}.commerce-main h3{font-size:17px}.commerce-main p{line-height:1.7}.lead{color:var(--muted);margin-bottom:28px}.checkout-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr);gap:26px;align-items:start}.panel{padding:28px;background:#fff;border:1px solid var(--line);border-radius:22px;margin-bottom:22px}.panel.tinted{background:#f4f4f2}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.fields label,.stack label{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600}.fields .full{grid-column:1/-1}.commerce-main input:not([type=checkbox]),.commerce-main select,.commerce-main textarea{width:100%;min-height:46px;background:#fff;border:1px solid #cececa;border-radius:10px;padding:12px;color:var(--ink);font-size:14px}.commerce-main textarea{min-height:100px;resize:vertical}.commerce-main form .button{margin-top:20px;background:var(--ink);color:#fff}.commerce-main .button:disabled{opacity:.45;cursor:not-allowed}.order-item{display:grid;grid-template-columns:65px 1fr;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:16px 0}.order-item img{width:65px;height:65px;object-fit:cover;border-radius:10px}.order-item p{margin:3px 0;font-size:12px}.totals{display:flex;justify-content:space-between;font-size:19px;font-weight:700;padding:22px 0}.status{display:inline-block;padding:7px 11px;border-radius:30px;background:#ededea;color:#3a3a37;font-size:11px;font-weight:600}.status.proof_uploaded{background:#ffe58a;color:#5c3d00}.status.paid{background:#dce8ff;color:#1e3a8a}.status.packed{background:#e9e0ff;color:#4c1d95}.status.shipped{background:#d7f2ef;color:#115e59}.status.delivered{background:#ddf3e2;color:#166534}.status.proof_rejected{background:#fde2e0;color:#b42318}.steps{display:flex;gap:9px;flex-wrap:wrap;margin:24px 0 30px}.steps span{padding:9px 14px;border-radius:30px;background:#f4f4f2;font-size:12px}.bank-details{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#f1f0eb;padding:18px;border-radius:14px}.bank-details p{margin:0;font-size:12px}.bank-details strong{display:block}.timeline{list-style:none;padding:0}.timeline li{border-left:2px solid #c6eedb;padding:0 0 20px 20px;font-size:13px}.timeline time{display:block;font-size:11px;color:var(--muted);margin-bottom:6px}.error{color:#b42318;font-size:13px;min-height:20px}.success{padding:16px;border-radius:12px;background:#ddf3e2;color:#166534}.admin-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px}.admin-sidebar{background:#111111;border-radius:22px;color:#fff;padding:24px;align-self:start;display:flex;flex-direction:column;gap:12px}.admin-sidebar button,.admin-sidebar a{text-align:left;background:none;color:white;border:0;border-radius:10px;padding:12px;font-size:13px}.admin-sidebar button:hover,.admin-sidebar button.active{background:#2948d8}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}.metric{background:#fff;padding:22px;border-radius:18px;border:1px solid var(--line);text-align:left;color:var(--ink)}.metric strong{display:block;font-size:30px;letter-spacing:-.05em;margin:10px 0}.metric span{font-size:11px}.toolbar{display:flex;gap:14px;align-items:center;margin-bottom:20px}.table-scroll{overflow:auto}.orders-table{min-width:640px;margin:0}.orders-table button{background:#f4f4f2;border:0;padding:10px 15px;border-radius:20px;color:#111111;min-height:44px}.login-panel{max-width:470px;margin:20px auto}.stack{display:flex;flex-direction:column;gap:18px}.checkbox-label{display:flex!important;flex-direction:row!important;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6}.checkbox-label input{min-width:20px;min-height:20px}.action-panel{border-top:4px solid var(--ink)}.message-preview{background:#f4f4f2;padding:18px;border-radius:12px;font-size:13px;white-space:pre-wrap;margin:16px 0}.muted{color:var(--muted)}.back-button{border:0;background:none;min-height:44px;margin-bottom:20px;color:#111111;font-weight:600}.proof-link{display:block;border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px;margin:8px 0;min-height:44px;text-align:left}.proof-preview{width:100%;max-height:350px;object-fit:contain}.notice-box{padding:18px;background:#f4f4f2;border-radius:14px;font-size:13px;margin:18px 0}#notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111111;color:white;padding:15px 24px;border-radius:25px;display:none;max-width:90%;z-index:10}#notice.visible{display:block}.login-help{font:12px 'Geist Mono',monospace;background:#f1f0eb;padding:15px;border-radius:12px;line-height:1.8}.admin-top{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:28px}.admin-top h1{margin:0}.message-entry{padding:16px 0;border-bottom:1px solid var(--line)}.message-entry p{white-space:pre-wrap;font-size:13px}.message-entry small{color:var(--muted)}@media(max-width:900px){.metrics{grid-template-columns:1fr 1fr}.admin-layout{grid-template-columns:1fr}.admin-sidebar{flex-direction:row;flex-wrap:wrap;padding:14px}.checkout-layout{grid-template-columns:1fr}}@media(max-width:600px){.commerce-header{flex-direction:column;gap:14px}.commerce-header nav{gap:24px}.commerce-main{padding-top:28px}.commerce-main h1{font-size:36px}.panel{padding:20px}.fields{grid-template-columns:1fr}.fields .full{grid-column:auto}.toolbar{flex-direction:column}.metrics{gap:10px}.metric{padding:16px}.metric strong{font-size:26px}.admin-top{align-items:flex-start;flex-direction:column}.bank-details{grid-template-columns:1fr}.commerce-header .logo{font-size:36px}}
+
+.checkout-layout>* ,.admin-layout>*,.fields>label{min-width:0}
+.commerce-main h1,.commerce-main strong,.commerce-main p{overflow-wrap:anywhere}
+@media(max-width:600px){.commerce-header nav{flex-wrap:wrap;justify-content:center}.commerce-header nav a{min-height:44px;display:inline-flex;align-items:center}.admin-sidebar button,.admin-sidebar a{min-height:44px}.admin-sidebar{gap:4px}}
+/* Delivery: Soweto door delivery or PAXI */
+.form-heading{margin:30px 0 14px}
+.delivery-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.delivery-choice.compact{margin:4px 0 0}
+.choice-card{display:flex!important;flex-direction:row!important;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;background:#fff;min-height:44px}
+.choice-card:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.commerce-main .choice-card input{width:20px;min-width:20px;min-height:20px;height:20px;padding:0;margin:1px 0 0;flex:none;accent-color:var(--ink)}
+.choice-card>span{flex:1;text-align:left}
+.choice-card strong{display:block;font-size:14px}
+.choice-card small{display:block;color:var(--muted);font-weight:400;font-size:12px;line-height:1.5;margin-top:4px}
+.method-fields{border:0;padding:0;margin:0 0 6px;min-width:0}
+.method-fields a{text-decoration:underline}
+.status.cancelled{background:#ededea;color:#6b6b66}
+/* Admin shell additions */
+.nav-count{display:inline-block;background:#ffe58a;color:#5c3d00;border-radius:20px;padding:1px 8px;font-size:11px;margin-left:4px}
+.setup-alert{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:14px;padding:16px 18px;margin-bottom:20px;font-size:13px;color:var(--ink);min-height:44px}
+.metric.is-active{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.text-button{text-decoration:underline;margin-right:12px}
+.text-button.danger{color:#b42318;display:block;margin:14px auto 0}
+/* Products & stock list */
+.product-admin-list{display:flex;flex-direction:column}
+.product-row{display:grid;grid-template-columns:64px minmax(0,1.6fr) minmax(0,.9fr) minmax(0,1.4fr) auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.product-row img{width:64px;height:64px;object-fit:cover;border-radius:12px;background:var(--surface)}
+.product-row .product-brand{margin:0 0 4px}
+.product-row-name strong{display:block;font-size:15px}
+.product-row small{display:block;color:var(--muted);font-size:11px;margin-top:4px;line-height:1.5}
+.product-row-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.product-row-actions button,.size-tools button,.inline-input button{background:#f4f4f2;border:0;padding:10px 15px;border-radius:20px;color:#111;min-height:44px;font-size:13px}
+.stock-pill{display:inline-block;padding:6px 10px;border-radius:30px;font-size:11px;font-weight:600;background:#ddf3e2;color:#166534}
+.stock-pill.low{background:#ffe58a;color:#5c3d00}
+.stock-pill.sold-out{background:#fde2e0;color:#b42318}
+.stock-pill.hidden{background:#ededea;color:#3a3a37}
+/* Product editor */
+.product-editor{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.editor-side{position:sticky;top:20px}
+.preview-panel .button{width:100%}
+.product-grid.single{grid-template-columns:1fr}
+.photo-empty{display:flex;height:100%;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+.image-search{display:flex;gap:10px;margin:22px 0 8px}
+.image-search .button{margin-top:0!important;white-space:nowrap;padding:12px 20px}
+.image-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin:12px 0 18px}
+.image-option{position:relative;border:2px solid transparent;border-radius:14px;padding:0;background:var(--surface);overflow:hidden;text-align:left;min-height:44px}
+.image-option img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.image-option span{display:block;font:10px 'Geist Mono',monospace;color:var(--muted);padding:6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.image-option:hover{border-color:var(--line)}
+.image-option.selected{border-color:var(--ink)}
+.image-option.selected::after{content:'Chosen';position:absolute;top:8px;left:8px;background:var(--ink);color:#fff;border-radius:20px;padding:4px 9px;font-size:10px;font-weight:600}
+.image-option.is-loading{opacity:.5}
+.image-option:disabled{cursor:wait}
+.image-skeleton{aspect-ratio:1;border-radius:14px;background:var(--surface);animation:pulse 1.2s ease-in-out infinite alternate}
+@keyframes pulse{to{opacity:.45}}
+.image-other{margin:6px 0 10px;font-size:13px}
+.image-other summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.inline-input{display:flex;gap:8px;align-items:center}
+.inline-input input{min-width:0}
+.category-picks{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.category-picks legend{font-size:13px;font-weight:600;margin-bottom:8px;padding:0}
+.chip-check{display:inline-flex!important;flex-direction:row!important;align-items:center;gap:8px!important;border:1px solid var(--line);border-radius:30px;padding:10px 14px;min-height:44px;cursor:pointer;font-weight:500!important}
+.chip-check:has(input:checked){background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip-check input{accent-color:var(--ink);min-height:auto!important;width:auto!important}
+.size-tools{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.size-tools .inline-input input{width:120px}
+.stock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px}
+.stock-cell{position:relative;display:flex!important;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;font-weight:600}
+.stock-cell.low{background:#fff6cc;border-color:#ffd23f}
+.stock-cell.out{background:#fde2e0;border-color:#f5b5ae}
+.stock-cell small{color:var(--muted);font-weight:400}
+.stock-cell button{position:absolute;top:4px;right:4px;width:32px;height:32px;border:0;background:none;font-size:18px;color:var(--muted)}
+@media(max-width:1100px){.product-editor{grid-template-columns:1fr}.editor-side{position:static}.product-row{grid-template-columns:56px minmax(0,1fr) auto}.product-row img{width:56px;height:56px}.product-row-price{grid-column:2}.product-row-stock{grid-column:2}.product-row-actions{grid-column:1/-1;justify-content:flex-start}}
+@media(max-width:600px){.delivery-choice{grid-template-columns:1fr}.image-search{flex-direction:column}.image-results{grid-template-columns:repeat(2,1fr)}.inline-input{flex-wrap:wrap}}
+/* On phones the next order action comes first, so the owner can approve, pack and dispatch without scrolling. */
+@media(max-width:900px){.admin-layout .checkout-layout>aside{order:-1}}

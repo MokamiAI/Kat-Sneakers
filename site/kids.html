@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bright canvas, familiar classics and easy everyday looks for growing feet. Explore our illustrative kids and teens range, with UK sizes on every pair.">
+  <meta name="theme-color" content="#111111">
+  <title>Kids & Teens | Kat Sneakers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/catalogue.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="kids" data-initial-category="Kids">
+  <a class="skip" href="#shop">Skip to products</a>
+  <div class="announcement"><span>GOOD SHOES. FAIR PRICES.</span><span>Soweto door delivery · PAXI nationwide <span aria-hidden="true">↗</span></span><span>PROUDLY SOUTH AFRICAN</span></div>
+  <header class="header wrap">
+    <a class="logo" href="index.html" aria-label="Kat Sneakers home">Kat Sneakers</a>
+    <nav aria-label="Main navigation"><a href="new-in.html">New in</a><a href="men.html">Men</a><a href="women.html">Women</a><a href="kids.html" aria-current="page">Kids</a><a href="brands.html">Brands</a><a href="sale.html" class="sale">Sale</a></nav>
+    <div class="header-actions"><a class="header-signin" href="login.html">Sign in</a><a class="header-join" href="signup.html">Join</a>
+    <button class="bag-button" id="open-bag">Bag <span id="bag-count">0</span> <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">LITTLE STEPS. BIG PERSONALITY.</p><h1 id="hero-title">Ready, set.<br>Everyday adventures.</h1><p>Bright canvas, familiar classics and easy everyday looks for growing feet. Explore our illustrative kids and teens range, with UK sizes on every pair.</p><a class="button" href="#shop">Explore kids & teens <span aria-hidden="true">&#8599;</span></a><div class="hero-note"><span class="small-line"></span>For play days and everyday.</div></div>
+      <div class="hero-photo"><img src="images/sneakers/pink-on-wood.jpg" alt="Small pink sneakers displayed on a wooden surface" fetchpriority="high"><span class="photo-caption">KAT SNEAKERS / KIDS & TEENS</span></div>
+    </section>
+    <div class="benefits wrap"><span><b aria-hidden="true">↗</b> Nationwide delivery</span><span><b aria-hidden="true">◇</b> Styles for the whole family</span><span><b aria-hidden="true">↔</b> Find your fit, in UK sizes</span><span><b aria-hidden="true">○</b> Pay by EFT</span></div>
+    <section class="section wrap" id="shop" aria-labelledby="shop-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT EVERYDAY FAVOURITE</p><h2 id="shop-title">Explore kids & teens.</h2></div><span class="collection-note">Good pairs. Even better prices.</span></div>
+      <div class="shop-tools"><div class="tabs" role="group" aria-label="Filter products"><button class="active" data-category="All" aria-pressed="true">All pairs</button><button data-category="Men" aria-pressed="false">Men</button><button data-category="Women" aria-pressed="false">Women</button><button data-category="Kids" aria-pressed="false">Kids</button><button data-category="Comfort" aria-pressed="false">Comfort & wide fit</button><button data-category="Sale" aria-pressed="false">Sale</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search your next pair" aria-label="Search products"></label></div>
+      <div class="filter-row"><span id="result-count" aria-live="polite"></span><div><label>Budget <select id="budget"><option value="99999">All prices</option><option value="500">Under R500</option><option value="1000">Under R1 000</option><option value="1500">Under R1 500</option></select></label><label>Sort <select id="sort"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div></div>
+      <div class="product-grid" id="products"></div><p id="empty" hidden>No pairs found. Try another search or budget.</p>
+    </section>
+<section class="section wrap editorial" aria-label="Collection inspiration"><div class="section-heading"><div><p class="eyebrow">A LITTLE INSPIRATION</p><h2>Find your everyday style.</h2></div></div><div class="editorial-grid"><article><img src="images/sneakers/vans-yellow-low.jpg" alt="Small sizes collection inspiration" loading="lazy"><div><h3>Small sizes</h3><p>Explore kids&#8217; UK sizing, from 10K upwards.</p><button class="text-button" data-editorial-brand="Vans">Explore Vans &#8599;</button></div></article><article><img src="images/sneakers/converse-blue.jpg" alt="After-school canvas collection inspiration" loading="lazy"><div><h3>After-school canvas</h3><p>Classic shapes for their own sense of style.</p><button class="text-button" data-editorial-brand="Converse">Explore Converse &#8599;</button></div></article><article><img src="images/sneakers/pink-white-low.jpg" alt="Colourful favourites collection inspiration" loading="lazy"><div><h3>Colourful favourites</h3><p>A little colour for their daily adventures.</p><button class="text-button" data-editorial-brand="Kat Everyday">Explore Kat Everyday &#8599;</button></div></article></div></section>
+    <section class="budget-banner wrap"><div><p class="eyebrow">GREAT STYLE. SMALLER PRICE TAG.</p><h2>A fresh pair.<br>A little change to spare.</h2><p>Everyday favourites that work for your wardrobe and your wallet.</p><button class="button" id="under-1000">Shop under R1 000 <span aria-hidden="true">↗</span></button></div><img src="images/sneakers/converse-all-star-white-pair.jpg" alt="White Converse sneakers styled for everyday wear" loading="lazy"></section>
+    <section class="section wrap" id="brands"><div class="section-heading"><div><p class="eyebrow">THE NAMES YOU KNOW</p><h2>Your brands. Your style.</h2></div><button class="text-button" id="all-brands">Explore all pairs ↗</button></div><div class="brand-grid" id="brand-list"></div><div class="brand-stories" id="brand-stories" hidden></div></section>
+    <section class="fit-section wrap"><div><p class="eyebrow">A GOOD FIT STARTS HERE</p><h2>Shopping for someone else?<br>Start with their size.</h2></div><button class="button light" id="size-guide">View size guide ↗</button></section>
+  </main>
+  <footer><div class="wrap footer-main"><div><a class="logo" href="index.html">Kat Sneakers</a><p>A pair for every day.<br>And everyone.</p></div><div><h3>Find your pair</h3><a href="men.html">Men</a><a href="women.html">Women</a><a href="kids.html">Kids & teens</a></div><div><h3>Good to know</h3><a href="login.html">Customer sign in</a><a href="account.html">My account & orders</a><a href="admin.html">Store management</a><button class="footer-link" id="delivery-info">Delivery & payment</button><button class="footer-link" id="footer-size-guide">Size guide</button><a href="images/sneakers/CREDITS.md">Photo credits</a></div><div class="footer-message">Made for your<br>everyday.</div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Kat Sneakers. Proudly South African.</span><span>Prices in ZAR incl. VAT · Pay by EFT · Soweto delivery & PAXI nationwide</span></div></footer>
+  <dialog id="product-dialog" aria-labelledby="product-title"><button class="close" data-close aria-label="Close product">×</button><div id="product-detail"></div></dialog>
+  <dialog id="bag-dialog" aria-labelledby="bag-title"><div class="drawer-heading"><h2 id="bag-title">Your bag<span>.</span></h2><button class="close" data-close aria-label="Close bag">×</button></div><div id="bag-items"></div><div id="bag-summary"></div></dialog>
+  <dialog id="info-dialog" aria-labelledby="info-title"><button class="close" data-close aria-label="Close information">×</button><div id="info-content"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
